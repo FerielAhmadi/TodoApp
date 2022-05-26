@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_200"
+            app:title=" "
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-light"
+                android:shadowColor="@color/white"
+                android:text="To Do List"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-50dp" />
+
+            <ImageButton
+                android:id="@+id/settingsBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_exit" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <include layout="@layout/content_home_screen" />-->
+
+    <ListView
+        android:id="@+id/listPasswords"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:textAlignment="center"
+        android:divider="@null"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:layout_height="match_parent" >
+
+    </ListView>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/filterTextview"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="12dp"
+        android:hint="Search..."
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/AddBtn"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="10dp"
+
+        android:text="+"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="end|center" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
